@@ -8,7 +8,7 @@ echo -e "\n\nNOW ENTER YOUR HEROKU PASSWORD"
 # - devcenter.heroku.com/articles/heroku-postgresql
 heroku login
 heroku create
-ssh-keygen -t rsa
+#ssh-keygen -t rsa
 heroku keys:add
 heroku addons:add heroku-postgresql:dev
 heroku pg:promote `heroku config  | grep HEROKU_POSTGRESQL | cut -f1 -d':'`
